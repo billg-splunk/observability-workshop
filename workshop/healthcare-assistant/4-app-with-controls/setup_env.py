@@ -1,0 +1,34 @@
+"""Validate required environment variables are set."""
+import os
+
+REQUIRED_ENV_VARS = [
+    "OPENAI_API_KEY",
+    "OPENAI_BASE_URL",
+    "POSTGRES_HOST",
+    "POSTGRES_PORT",
+    "POSTGRES_USER",
+    "POSTGRES_PASSWORD",
+    "POSTGRES_DB",
+    "ENVIRONMENT",
+    "GALILEO_API_KEY",
+    "GALILEO_CONSOLE_URL",
+    "GALILEO_PROJECT",
+    "GALILEO_LOG_STREAM",
+    "GALILEO_API_URL",
+    "AGENT_CONTROL_URL",
+    "AGENT_CONTROL_AGENT_NAME",
+    "AGENT_CONTROL_API_KEY_HEADER",
+    "AGENT_CONTROL_RUNTIME_AUTH_MODE",
+    "AGENT_CONTROL_TARGET_TYPE"
+]
+
+def setup_environment():
+    missing = [var for var in REQUIRED_ENV_VARS if not os.getenv(var)]
+    for var in missing:
+        print(f"⚠️  {var} not set")
+    if not missing:
+        print("🔧 Environment setup complete")
+
+
+if __name__ == "__main__":
+    setup_environment()

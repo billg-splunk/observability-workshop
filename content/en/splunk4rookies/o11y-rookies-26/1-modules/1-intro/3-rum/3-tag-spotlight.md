@@ -10,10 +10,10 @@ weight: 3
 ![RUM Tag Spotlight](../images/rum-tag-spotlight.png)
 
 * Change the timeframe to **Last 1 hour** **(1)**.
-<!--* Click **Add Filters**, select **OS Version**, click **!=** and select **Synthetics** and **RUM.LoadGen** then click the {{% button style="blue" %}}Apply Filter{{% /button %}} button **(2)**.-->
-* Find the **Operation** chart, locate **PlaceOrder** in the list, click on it and select **Add to filter** **(2)**.
-* Click on the **User Sessions** tab **(3)**.
-* Click on the **Duration** heading twice to sort the sessions by duration (longest at the top) **(4)**.
+
+* Find the **Custom Workflow Name** chart, locate **PlaceOrder** in the list **(2)**, click on it and select **Add to filter** **(3)** in the popup window to appl the filter to the page.
+* Click on the **User Sessions** tab **(4)**.
+* Click on the **Duration** heading twice to sort the sessions by duration (longest at the top) **(5)**.
 
 * We now have a User Session table sorted by longest duration (descending), showing users who have been shopping on the site. We could apply more filters to further narrow down the data, e.g. OS version, browser version, etc.
 
